@@ -1,0 +1,10 @@
+variables:
+  OS: "macos"
+
+target: "/Users/jan"
+
+dotfiles:
+  - path: "base"
+  - path: "wezterm"
+  - path: "zsh"
+

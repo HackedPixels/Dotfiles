@@ -1,0 +1,23 @@
+# vim: set sw=2 ts=2 et :
+[core]
+{{@if {{OS}} == "linux"}}
+  editor = nvim
+{{@fi}}
+  autocrlf = false
+  eol = lf
+
+[init]
+  defaultBranch = main
+
+[user]
+  email = "jan@koeppen.name"
+  name = Jan Köppen
+  signingKey = 58FA2315951D80DFE8ABDF7C99238E2B4C6AA9AE
+
+# use gpg included with git
+[gpg]
+{{@if {{OS}} == "windows"}}
+  program = "C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe"
+{{@else}}
+  program = gpg
+{{@fi}}
