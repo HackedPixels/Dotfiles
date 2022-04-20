@@ -4,6 +4,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # Fix the right trailing space
 # https://github.com/romkatv/powerlevel10k/issues/68#issuecomment-492010264

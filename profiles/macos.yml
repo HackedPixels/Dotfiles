@@ -3,8 +3,14 @@ variables:
 
 target: "/Users/jan"
 
+pre_hooks:
+  # install all packages needed
+  - brew bundle install --file=../Brewfile
+
 dotfiles:
   - path: "base"
   - path: "wezterm"
+    overwrite_target: "/Users/jan/.config"
+    merge: Overwrite
   - path: "zsh"
 

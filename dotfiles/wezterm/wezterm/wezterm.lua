@@ -6,7 +6,7 @@ function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     return "BlulocoDark";
   else
-    return "BlulocoLight";
+    return "Novel";
   end
 end
 
